@@ -1,0 +1,25 @@
+{
+  "name": "backend-2",
+  "version": "1.0.0",
+  "description": "This is a complete backend project with Node",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshith-murali/project-cap-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshith-murali/project-cap-backend/issues"
+  },
+  "homepage": "https://github.com/harshith-murali/project-cap-backend#readme",
+  "devDependencies": {
+    "prettier": "3.8.1"
+  }
+}
