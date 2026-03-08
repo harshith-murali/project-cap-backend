@@ -1,20 +1,21 @@
-import dotenv from "dotenv";
-dotenv.config();
-
-import express from "express";
-
-const app = express();
+import "dotenv/config";
+import app from "./app.js";
+import connectDb from "./db/index.js";
 
 const PORT = process.env.PORT || 3000;
 
-app.get("/", (req, res) => {
-  res.send("Project Camp Backend Live 🚀");
-});
+const startServer = async () => {
+  try {
+    await connectDb();
 
-app.get("/welcome", (req, res) => {
-  res.send("Welcome to Project Camp Backend! 🎉");
-});
+    app.listen(PORT, () => {
+      console.log(`Server running on port ${PORT}`);
+    });
 
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
+  } catch (error) {
+    console.error("Failed to start server ❌", error);
+    process.exit(1);
+  }
+};
+
+startServer();
