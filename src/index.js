@@ -11,6 +11,10 @@ app.get("/", (req, res) => {
   res.send("Project Camp Backend Live 🚀");
 });
 
+app.get("/welcome", (req, res) => {
+  res.send("Welcome to Project Camp Backend! 🎉");
+});
+
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
