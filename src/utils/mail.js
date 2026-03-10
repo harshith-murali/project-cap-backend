@@ -65,15 +65,17 @@ export const forgotPasswordMailgenContent = (username, resetPasswordUrl) => {
       intro: "You have requested to reset your password.",
       action: {
         instructions:
-          "To reset your password, please click on the following button",
+          "To reset your password, please click on the button below:",
         button: {
           color: "#DC4D2F",
           text: "Reset your password",
           link: resetPasswordUrl,
         },
       },
-      outro:
-        "If you did not request a password reset, no further action is required on your part.",
+      outro: [
+        "If you did not request a password reset, no further action is required.",
+        `Or copy and paste this link into your browser: ${resetPasswordUrl}`,
+      ],
     },
   };
 };
